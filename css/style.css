@@ -1,0 +1,222 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+/* Estilos para o header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ajuste para alinhar com o topo da logo */
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+  background-color: #fff; /* Adicionado fundo branco à logo */
+  border-radius: 50%; /* Adicionado borda arredondada */
+  box-shadow: 0 0 10px rgba(4, 0, 255, 0.2); /* Adicionado sombra */
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 26, 255, 0.2);
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 100%;
+}
+
+nav ul li ul li a {
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Alinhar o menu à direita */
+nav {
+  margin-left: auto;
+}
+
+/* Remover espaçamento entre os itens do menu */
+nav ul li {
+  margin-right: 10px;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  padding: 20px;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Estilos para o main */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  margin-top: 20px;
+}
+
+main p {
+  margin-bottom: 10px;
+}
+
+main ul {
+  margin-bottom: 20px;
+}
+
+main li {
+  margin-bottom: 5px;
+}
+
+/* Estilos para o footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos para o botão de alternar tema */
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0011ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2; /* Aumenta o z-index para que o botão fique acima dos demais elementos */
+}
+
+body {
+  background-color: #f5f5f5; /* Cinza claro */
+}
+
+/* Estilos para o tema escuro */
+.dark-mode body {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #333;
+}
+
+.dark-mode nav ul li a {
+  color: #ccc;
+}
+
+.dark-mode nav ul li ul {
+  background-color: #333;
+}
+
+.dark-mode nav ul li ul li a {
+  color: #ccc;
+}
+
+.dark-mode nav ul li ul li a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode main {
+  background-color: #222;
+}
+
+.dark-mode main h2 {
+  color: #fff;
+}
+
+.dark-mode main a {
+  color: #ccc;
+}
+
+.dark-mode main ul li {
+  color: #fff;
+}
+
+.dark-mode main ul li a {
+  color: #fff;
+}
+
+.dark-mode main p {
+  color: #fff;
+}
+
+.dark-mode main ul {
+  border-color: #ccc;
+}
+
+.dark-mode main li:before {
+  background-color: #ccc;
+}
+
+.dark-mode footer {
+  background-color: #333;
+  color: #ccc;
+}

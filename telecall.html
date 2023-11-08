@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Tela de Cadastro TeleCall</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="shortcut icon" href="telecallicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    .toggle-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        background-color: #FFF;
+        color: #000;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+<script>
+  function toggleDarkMode() {
+      const body = document.querySelector("body");
+      body.classList.toggle("dark-mode");
+  }
+
+  function validateForm() {
+  }
+function validateForm() {
+const nome = document.getElementById("idenome").value;
+const datadenascimento = document.getElementById("iddatadenascimento").value;
+const nomematerno = document.getElementById("idenomematerno").value;
+const cpf = document.getElementById("idcpf").value;
+const celular = document.getElementById("idcelular").value;
+const telefonefixo = document.getElementById("idtelefonefixo").value;
+const endereco = document.getElementById("idendereco").value;
+const login = document.getElementById("idlogin").value;
+const senha = document.getElementById("idsenha").value;
+const confirmesenha = document.getElementById("idconfirmesenha").value;
+
+if (
+  nome.trim() === "" ||
+  datadenascimento.trim() === "" ||
+  nomematerno.trim() === "" ||
+  cpf.trim() === "" ||
+  celular.trim() === "" ||
+  telefonefixo.trim() === "" ||
+  endereco.trim() === "" ||
+  login.trim() === "" ||
+  senha.trim() === "" ||
+  confirmesenha.trim() === ""
+) {
+  document.getElementById("error-message").textContent =
+      "Todos os campos devem ser preenchidos.";
+  return false;
+}
+
+if (nome.trim().length < 15 || nome.trim().length > 60 || !/^[a-zA-Z\s]+$/.test(nome)) {
+  document.getElementById("error-message").textContent =
+      "O campo nome deve ter entre 15 e 60 caracteres alfabéticos.";
+  return false;
+
+}
+
+if (login.trim().length !== 6 || !/^[a-zA-Z\s]+$/.test(login)) {
+  document.getElementById("error-message").textContent =
+      "O campo Login deve ter exatamente 6 caracteres alfabéticos.";
+  return false;
+}
+
+if (senha.trim().length !== 8 || !/^[a-zA-Z\s]+$/.test(senha)) {
+  document.getElementById("error-message").textContent =
+      "O campo Senha deve ter exatamente 8 caracteres alfabéticos.";
+  return false;
+}
+
+if (senha.trim() !== confirmesenha.trim()) {
+  document.getElementById("error-message").textContent =
+      "Os campos Senha e Confirme Senha devem ser iguais.";
+  return false;
+}
+
+return true;
+}
+</script>
+
+</head>
+<body>
+  <nav class="light red accent-4 lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="imagens/logo.jpg" alt="Logo" width="140"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="title">Cadastre-se</div>
+    <div class="toggle-button" onclick="toggleDarkMode()">Alternar Modo</div>
+
+    <div class="container">
+    </div>    
+    <form action="backend/processar_cadastro.php" method="post">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Nome Completo</span>
+                <input type="text" name="nome" id="idenome" placeholder="Digite seu Nome" >
+            </div>
+            <div class="input-box">
+                <span class="details">Data de Nascimento</span>
+                <input type="date" name="datadenascimento" id="iddatadenascimento" >
+            </div>
+            <div class="input-box">
+                <span class="details">Nome Materno</span>
+                <input type="text" name="nome_materno" id="idenomematerno" placeholder="Digite o Nome Materno" >
+            </div>
+            <div class="input-box">
+                <span class="details">CPF</span>
+                <input type="text" name="cpf" id="idcpf" placeholder="Digite seu CPF" >
+            </div>
+            <div class="input-box">
+                <span class="details">Telefone Celular</span>
+                <input type="text" name="celular" id="idcelular" placeholder="(xx) xxxxx-xxxx" >
+            </div>
+            <div class="input-box">
+                <span class="details">Telefone Fixo</span>
+                <input type="text" name="telefonefixo" id="idtelefonefixo" placeholder="(xx) xxxx-xxxx" >
+            </div>
+            <div class="input-box">
+                <span class="details">Endereço Completo</span>
+                <input type="text" name="endereco" id="idendereco" placeholder="Digite seu Endereço Completo" >
+            </div>
+            <div class="input-box">
+                <span class="details">Login</span>
+                <input type="text" name="login" id="idlogin" placeholder="Digite seu Login" >
+            </div>
+            <div class="input-box">
+                <span class="details">Senha</span>
+                <input type="password" name="senha" id="idsenha" placeholder="Digite sua Senha" >
+            </div>
+            <div class="input-box">
+                <span class="details">Confirme Senha</span>
+                <input type="password" name="confirmesenha" id="idconfirmesenha" placeholder="Confirme sua Senha" >
+            </div>
+        </div>
+        <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gênero</span>
+            <div class="categoria">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Masculino</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Feminino</span>
+                </label>
+                <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Prefiro Não Dizer</span>
+                </label>
+            </div>
+        </div>
+        <div class="button">
+            <div class="button">
+                <input type="submit" value="Cadastrar" onclick="window.location.href='cadastro.html'">
+                <input type="submit" value="Já Possuo Conta" onclick="window.location.href='login.html'">
+            </div>
+        <div class="error" id="error-message"></div>
+    </form>
+</div>
+
+
+  
+
+  <footer class="page-footer red accent-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Telecall</h5>
+          <p class="grey-text text-lighten-4">A Telecall é uma operadora de telecomunicações brasileira que oferece a seus clientes o mais alto padrão de qualidade, velocidade e acessibilidade em soluções de comunicação. Serviços que incluem uma ampla gama de valores agregados, oferecendo aos clientes operações mais produtivas, inovadoras e eficazes. Com mais de 20 anos de experiência na indústria global, a Telecall hoje é sinônimo de qualidade e eficiência..</p>
+
+
+        </div>
+        
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.instagram.com/telecallbr/"><img src="imagens/instalogo.jpg" alt="insta" width="40"></a></li>
+            <li><a class="white-text" href="https://web.facebook.com/TelecallBr?_rdc=1&_rdr"><img src="imagens/facelogo.jpg" alt="insta" width="40"></a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/company/telecall/"><img src="imagens/linkedinlogo.jpg" alt="insta" width="40"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="blue-text text-lighten-3" href="https://telecall.com/"> © 2023 Telecall. Todos os direitos reservados.</a>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+
+  
+  </body>
+</html>

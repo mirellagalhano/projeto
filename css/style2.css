@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body.dark-mode {
+    background: linear-gradient(-135deg, #36393b, #45484b, #696758);
+    color: black;
+}
+
+.container.dark-mode {
+    background: white;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #02218a, #910a2b, #1f54ab);
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    background: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 30px;
+    background: linear-gradient(135deg, #02218a, #910a2b, #1f54ab);
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 3px 0;
+}
+
+.container form .user-details .input-box {
+    margin-bottom: 10px;
+    width: calc(100% / 2 - 20px);
+}
+
+.container form .user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.container form .user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 200px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.container form .user-details .input-box input:focus,
+.container form .user-details .input-box input:valid {
+    border-color: #9b59b6;
+}
+
+.container form .user-details .input-box input.error {
+    border-color: red;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .categoria {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .gender-details .categoria label {
+    display: flex;
+    align-items: center;
+}
+
+form .gender-details .categoria .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .categoria label .one,
+#dot-2:checked ~ .categoria label .two,
+#dot-3:checked ~ .categoria label .three {
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 50px;
+    margin: 20px 0;
+}
+
+form .button input {
+    border: 1px solid;
+    height: 100%;
+    width: 49.5%;
+    outline: none;
+    vertical-align: middle;
+    background: linear-gradient(135deg, #02218a, #910a2b, #1f54ab);
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #02218a, #910a2b, #1f54ab);
+}
+
+.container2 {
+    max-width: 600px;
+    width: 100%;
+    background: #FFF;
+    padding: 25px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.container2 .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container2 .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 200px;
+    background: linear-gradient(135deg, #02218a, #910a2b, #1f54ab);
+}
+
+.container2 form .user-details2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 3px 0;
+}
+
+.container2 form .user-details2 .input-box2 {
+    margin-bottom: 10px;
+    width: calc(100% / 2 - 20px);
+}
+
+.container2 form .user-details2 .input-box2 .details2 {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.container2 form .user-details2 .input-box2 input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 200px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.container2 form .user-details2 .input-box2 input:focus,
+.container2 form .user-details2 .input-box2 input:valid {
+    border-color: #9b59b6;
+}
+
+.container2 form .user-details2 .input-box2 input.error {
+    border-color: red;
+}
+
+form .button2 {
+    height: 50px;
+    margin: 20px 0;
+}
+
+form .button2 input {
+    border: 1px solid;
+    height: 100%;
+    width: 49.5%;
+    outline: none;
+    vertical-align: middle;
+    background: linear-gradient(135deg, #02218a, #910a2b, #1f54ab);
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+form .button2 input:hover {
+    background: linear-gradient(-135deg, #02218a, #910a2b, #1f54ab);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.zoom-in {
+    transform: scale(1.2);
+}
+
+.zoom-out {
+    transform: scale(0.8);
+}
+
+@media (max-width: 480px) {
+    .container,
+    .container2 {
+      padding: 10px;
+    }
+  
+    .container form .user-details .input-box,
+    .container2 form .user-details2 .input-box2 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container,
+    .container2 {
+      padding: 5px;
+    }
+  
+    .container .title::before,
+    .container2 .title::before {
+      width: 20px;
+    }
+  
+    .container form .user-details .input-box,
+    .container2 form .user-details2 .input-box2 {
+      margin-bottom: 5px;
+    }
+  
+    .container form .user-details .input-box input,
+    .container2 form .user-details2 .input-box2 input {
+      height: 30px;
+    }
+  
+    .container form .button input,
+    .container2 form .button2 input {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+  
